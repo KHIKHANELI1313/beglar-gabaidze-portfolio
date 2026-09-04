@@ -327,6 +327,13 @@ a.proj-card:focus-visible{outline:2px solid var(--accent-hover);outline-offset:3
 /* Reveal */
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
 .reveal.in{opacity:1;transform:translateY(0)}
+/* Slide in from the left, paragraph by paragraph (same feel as the hero) */
+.reveal-x{transform:none}
+.reveal-x.in>p{animation:slideInLeft .7s var(--ease) both}
+.reveal-x.in>p:nth-of-type(2){animation-delay:.14s}
+.reveal-x.in>p:nth-of-type(3){animation-delay:.28s}
+.reveal-x.in>p:nth-of-type(4){animation-delay:.42s}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-56px)}to{opacity:1;transform:none}}
 
 /* ---------- Phones ---------- */
 @media(max-width:640px){
@@ -471,7 +478,7 @@ a.proj-card:focus-visible{outline:2px solid var(--accent-hover);outline-offset:3
       </div>
     </div>
     <div class="about-grid">
-      <div class="about-text reveal">
+      <div class="about-text reveal reveal-x">
         <p data-i18n-ka>23 წლის IT სპეციალისტი ბათუმიდან. გამოცდილება ფრონტ-ენდში, ქსელებსა და კიბერუსაფრთხოებაში. მიყვარს ვებდიზაინი, ფოტო, 3D და მუსიკა.</p>
         <p data-i18n-en>23-year-old IT specialist from Batumi. Experienced in front-end, networking and cybersecurity. Into web design, photo, 3D and music.</p>
         <p data-i18n-ka>ვმუშაობ IT Specialist-ად BAU International Hospital Batumi-ში. პარალელურად — პერსონალური პროექტები: BEGA.info, Travel Guardian AI, ხიხაძირი, ხიხანის ციხე.</p>
