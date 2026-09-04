@@ -170,6 +170,8 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .floating-tag .dot{width:10px;height:10px;background:var(--accent);border-radius:50%}
 @media(max-width:880px){
   .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero{min-height:auto;padding:104px 0 64px}
+  .portrait-frame{max-width:400px;margin-inline:auto}
   .floating-tag.flag{left:-10px}.floating-tag.location{right:-10px}
 }
 
@@ -304,6 +306,27 @@ a.proj-card:focus-visible{outline:2px solid var(--accent-hover);outline-offset:3
 /* Reveal */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:translateY(0)}
+
+/* ---------- Phones ---------- */
+@media(max-width:640px){
+  .container{padding:0 20px}
+  .section{padding:72px 0}
+  .section-head{margin-bottom:32px}
+  .hero{padding:96px 0 56px}
+  .hero-title{font-size:clamp(28px,7.6vw,40px)}
+  .hero-sub{font-size:15.5px}
+  .hero-cta{gap:10px}
+  .hero-cta .btn{flex:1 1 100%;justify-content:center}
+  .hero-meta{gap:18px 26px;margin-top:30px}
+  .hero-meta .item{max-width:none;flex:1 1 40%}
+  .hero-meta .item .num{font-size:32px}
+  .stat-card{padding:20px}
+  .stat-card .n{font-size:44px}
+  .contact-card{padding:28px}
+  .form-card{padding:24px}
+  .contact-card h3{font-size:26px}
+  .contact-card .email{font-size:16px;word-break:break-all}
+}
 
 /* Reduced motion */
 @media (prefers-reduced-motion:reduce){
