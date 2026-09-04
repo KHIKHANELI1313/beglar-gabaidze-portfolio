@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ka" data-lang="ka">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Beglar Gabaidze — Personal Portfolio</title>
+<meta name="description" content="Beglar Gabaidze — Front-End Developer, IT Specialist & Cybersecurity enthusiast from Batumi, Georgia." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Georgian:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ============= INTRO ============= -->
+<div id="intro" aria-hidden="true">
+  <canvas id="introCanvas"></canvas>
+  <div style="text-align:center">
+    <div class="intro-name" data-i18n-ka>ბეგლარ გაბაიძე<span>BEGLAR GABAIDZE</span></div>
+    <div class="intro-name" data-i18n-en>Beglar Gabaidze<span>BEGLAR GABAIDZE</span></div>
+    <div class="intro-sub" data-i18n-ka>FRONT-END · IT · CYBERSECURITY</div>
+    <div class="intro-sub" data-i18n-en>FRONT-END · IT · CYBERSECURITY</div>
+  </div>
+</div>
+
+<!-- ============= CURSOR ============= -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- ============= HEADER ============= -->
+<header class="header" id="header">
+  <div class="nav">
+    <a href="#top" class="brand"><span class="brand-dot"></span> BEGLAR <span style="font-family:var(--font-display);font-weight:900;color:var(--accent)">G.</span></a>
+    <nav class="nav-links" id="nav">
+      <a href="#about" data-i18n-ka>შესახებ</a>
+      <a href="#about" data-i18n-en>About</a>
+      <a href="#skills" data-i18n-ka>უნარები</a>
+      <a href="#skills" data-i18n-en>Skills</a>
+      <a href="#projects" data-i18n-ka>პროექტები</a>
+      <a href="#projects" data-i18n-en>Projects</a>
+      <a href="#contact" data-i18n-ka>კონტაქტი</a>
+      <a href="#contact" data-i18n-en>Contact</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button data-set-lang="ka" class="active">KA</button>
+        <button data-set-lang="en">EN</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============= HERO ============= -->
+<section class="hero" id="top">
+  <canvas class="hero-canvas" id="heroCanvas"></canvas>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal in">
+        <div class="hero-eyebrow">
+          <span data-i18n-ka>ხელმისაწვდომია პროექტებისთვის</span>
+          <span data-i18n-en>Available for projects</span>
+          <span></span>
+        </div>
+        <h1 class="h-display hero-title">
+          <span data-i18n-ka>ინფორმაციული<br/>ტექნოლოგიების<br/><em>მენეჯერი</em></span>
+          <span data-i18n-en>Information<br/>Technology<br/><em>Manager</em></span>
+        </h1>
+        <p class="hero-sub" data-i18n-ka><strong>ბეგლარ გაბაიძე</strong> — 23 წლის IT სპეციალისტი ბათუმიდან, ვებდეველოპმენტის, კომპიუტერული ქსელებისა და კიბერუსაფრთხოების გამოცდილებით. ვაერთიანებ ტექნოლოგიურ ცოდნას, პრაქტიკულ გამოცდილებასა და კრეატიულ მიდგომას, რათა შევქმნა ეფექტური და თანამედროვე IT გადაწყვეტილებები.<br/><br/><strong>ტექნოლოგია + კრეატივი = ჩემი მიდგომა.</strong></p>
+        <p class="hero-sub" data-i18n-en><strong>Beglar Gabaidze</strong> — a 23-year-old IT specialist from Batumi, with experience in web development, computer networks and cybersecurity. I combine technical knowledge, hands-on practice and a creative approach to build effective, modern IT solutions.<br/><br/><strong>Technology + creativity = my approach.</strong></p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span data-i18n-ka>ნახეთ პროექტები</span>
+            <span data-i18n-en>View Projects</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <span data-i18n-ka>დამიკავშირდით</span>
+            <span data-i18n-en>Get in touch</span>
+          </a>
+        </div>
+        <div class="hero-meta">
+          <div class="item"><div class="num">3+</div><div class="lbl" data-i18n-ka>წელი გამოცდილება</div><div class="lbl" data-i18n-en>Years experience</div></div>
+          <div class="item"><div class="num">30+</div><div class="lbl" data-i18n-ka>ტექნოლოგია და ინსტრუმენტი</div><div class="lbl" data-i18n-en>Technologies &amp; tools</div></div>
+          <div class="item"><div class="num">9+</div><div class="lbl" data-i18n-ka>განხორციელებული პროექტი</div><div class="lbl" data-i18n-en>Delivered projects</div></div>
+          <div class="item"><div class="num">2</div><div class="lbl" data-i18n-ka>წელი პროფესიული IT გამოცდილება</div><div class="lbl" data-i18n-en>Years of professional IT experience</div></div>
+        </div>
+      </div>
+      <div class="reveal in" style="position:relative">
+        <div class="portrait-frame">
+          <img src="assets/portrait.png" alt="Beglar Gabaidze" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee"></div>
+</div>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n-ka>/ შესახებ</div>
+        <div class="eyebrow" data-i18n-en>/ About</div>
+        <h2 class="h-display">
+          <span data-i18n-ka>ვინ არის <em style="color:var(--accent-hover)">ბეგლარი</em>.</span>
+          <span data-i18n-en>Who is <em style="color:var(--accent-hover)">Beglar</em>.</span>
+        </h2>
+      </div>
+      <div class="right">
+        <span data-i18n-ka>IT სპეციალისტი — ვებდეველოპმენტი, ქსელები, კიბერუსაფრთხოება და დიზაინი ერთ ისტორიად.</span>
+        <span data-i18n-en>IT specialist — web development, networks, cybersecurity and design in one story.</span>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p data-i18n-ka>23 წლის IT სპეციალისტი ბათუმიდან. გამოცდილება ფრონტ-ენდში, ქსელებსა და კიბერუსაფრთხოებაში. მიყვარს ვებდიზაინი, ფოტო, 3D და მუსიკა.</p>
+        <p data-i18n-en>23-year-old IT specialist from Batumi. Experienced in front-end, networking and cybersecurity. Into web design, photo, 3D and music.</p>
+        <p data-i18n-ka>ვმუშაობ IT Specialist-ად BAU International Hospital Batumi-ში. პარალელურად — პერსონალური პროექტები: BEGA.info, Travel Guardian AI, ხიხაძირი, ხიხანის ციხე.</p>
+        <p data-i18n-en>IT Specialist at BAU International Hospital Batumi. On the side: BEGA.info, Travel Guardian AI, Khikhadziri, the Khikhani fortress site.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px">
+          <span class="chip">🌐 Web Development</span>
+          <span class="chip">🛡️ Cybersecurity</span>
+          <span class="chip">🧠 IT Management</span>
+          <span class="chip">🎨 UI/UX & Figma</span>
+          <span class="chip">🧊 3D & Motion</span>
+        </div>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat-card">
+          <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div class="n">23</div>
+          <div class="label" data-i18n-ka>წლის</div>
+          <div class="label" data-i18n-en>Years old</div>
+        </div>
+        <div class="stat-card">
+          <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg>
+          <div class="n">3+</div>
+          <div class="label" data-i18n-ka>წელი გამოცდილება</div>
+          <div class="label" data-i18n-en>Years experience</div>
+        </div>
+        <div class="stat-card">
+          <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          <div class="n">30+</div>
+          <div class="label" data-i18n-ka>ტექნოლოგია</div>
+          <div class="label" data-i18n-en>Tech stack items</div>
+        </div>
+        <div class="stat-card">
+          <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>
+          <div class="n">9+</div>
+          <div class="label" data-i18n-ka>პროექტი</div>
+          <div class="label" data-i18n-en>Delivered projects</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section class="section" id="skills" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n-ka>/ უნარები</div>
+        <div class="eyebrow" data-i18n-en>/ Skills</div>
+        <h2 class="h-display">
+          <span data-i18n-ka>ტექნოლოგიური <em style="color:var(--accent-hover)">განვითარება</em></span>
+          <span data-i18n-en>Technical <em style="color:var(--accent-hover)">growth</em></span>
+        </h2>
+      </div>
+      <div class="right" data-i18n-ka>დახარისხებული, პრაქტიკული და დასაქმებისთვის მზარი ცოდნა.</div>
+      <div class="right" data-i18n-en>Curated, hands-on knowledge ready for production work.</div>
+    </div>
+
+    <div class="skills-wrap reveal">
+      <div class="skill-card">
+        <div class="ico">FE</div>
+        <h4>Front-End</h4>
+        <ul>
+          <li>HTML · CSS · JavaScript</li>
+          <li>React · Next.js · TypeScript</li>
+          <li>Tailwind CSS · Shadcn UI</li>
+          <li>Framer Motion · Zustand</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="ico">BE</div>
+        <h4>Back-End</h4>
+        <ul>
+          <li>Node.js · Express.js</li>
+          <li>PostgreSQL · Prisma</li>
+          <li>Redis · JWT · WebSocket</li>
+          <li>Swagger · Nodemailer</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="ico">UI</div>
+        <h4 data-i18n-ka>UI/UX &amp; დიზაინი</h4><h4 data-i18n-en>UI/UX &amp; Design</h4>
+        <ul>
+          <li>Figma · 12-column grid</li>
+          <li>Glassmorphism · Neumorphism</li>
+          <li>Motion Design · 3D UI</li>
+          <li>Recharts · Chart.js</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="ico">IT</div>
+        <h4 data-i18n-ka>IT / ქსელები</h4><h4 data-i18n-en>IT &amp; Networks</h4>
+        <ul>
+          <li>Cisco · Palo Alto · Zscaler</li>
+          <li>VLAN · VPN · OSPF · BGP</li>
+          <li>Cybersecurity Specialist</li>
+          <li>VirtualBox · Kali Linux</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="ico">MAP</div>
+        <h4 data-i18n-ka>რუკები</h4><h4 data-i18n-en>Maps</h4>
+        <ul>
+          <li>Leaflet</li>
+          <li>Google Maps</li>
+          <li>Interactive Globe</li>
+         <li data-i18n-ka>Geo Storytelling</li>
+         <li data-i18n-en>Geo storytelling</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="ico">AUX</div>
+        <h4 data-i18n-ka>ინსტრუმენტები</h4><h4 data-i18n-en>Tooling</h4>
+        <ul>
+          <li>Docker · Git · VS Code</li>
+          <li>React Query · Zod</li>
+          <li>Cloudinary · Multer</li>
+          <li>VSCodroid · Claude Code</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="ico">MM</div>
+        <h4 data-i18n-ka>მულტიმედია</h4><h4 data-i18n-en>Multimedia</h4>
+        <ul>
+          <li data-i18n-ka>ფოტო დამუშავება</li>
+          <li data-i18n-en>Photo editing</li>
+          <li data-i18n-ka>3D მოდელირება</li>
+          <li data-i18n-en>3D modeling</li>
+          <li data-i18n-ka>მუსიკის წარმოება</li>
+          <li data-i18n-en>Music production</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="ico">SM</div>
+        <h4 data-i18n-ka>სოციალური</h4><h4 data-i18n-en>Soft skills</h4>
+        <ul>
+          <li data-i18n-ka>პრობლემების გადაჭრა</li>
+          <li data-i18n-en>Problem solving</li>
+          <li data-i18n-ka>კომუნიკაცია</li>
+          <li data-i18n-en>Communication</li>
+          <li data-i18n-ka>დიზაინ მიდგომა</li>
+          <li data-i18n-en>Design thinking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n-ka>/ გამოცდილება</div>
+        <div class="eyebrow" data-i18n-en>/ Experience</div>
+        <h2 class="h-display">
+          <span data-i18n-ka>პროფესიული <em style="color:var(--accent-hover)">გზა</em>.</span>
+          <span data-i18n-en>Professional <em style="color:var(--accent-hover)">journey</em>.</span>
+        </h2>
+      </div>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-meta"><span data-i18n-ka>IT Specialist</span><span data-i18n-en>IT Specialist</span><span>08/2024 — Present</span></div>
+          <h4>BAU International Hospital Batumi</h4>
+          <p data-i18n-ka>სამედიცინო დაწესებულების IT მხარდაჭერა, ქსელები, hardware/software მოვლა და უსაფრთხოება.</p>
+          <p data-i18n-en>IT support for a medical institution: networks, hardware/software maintenance and security.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-meta"><span data-i18n-ka>Front-End Developer</span><span data-i18n-en>Front-End Developer</span><span>2023 — 2025</span></div>
+          <h4>10x · ბათუმი</h4>
+          <p data-i18n-ka>HTML, CSS, JavaScript, Python და Front-End პროექტები. რეალური პროდუქტების შექმნა გუნდთან ერთად.</p>
+          <p data-i18n-en>HTML, CSS, JavaScript, Python and Front-End project work. Real products built with a team.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-meta"><span data-i18n-ka>Front-End Developer</span><span data-i18n-en>Front-End Developer</span><span>2022 — 2023</span></div>
+          <h4>Techno Park · ბათუმი</h4>
+          <p data-i18n-ka>ვებდეველოპმენტის პირველი საფეხური — ფუნდამენტური უნარების გაძლიერება და პრაქტიკული პროექტები.</p>
+          <p data-i18n-en>First step into web development — strengthening fundamentals with practical projects.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-meta"><span data-i18n-ka>Cybersecurity Specialist</span><span data-i18n-en>Cybersecurity Specialist</span><span>2022 — 2024</span></div>
+          <h4>Cisco Information Technology</h4>
+          <p data-i18n-ka>ქსელები, უსაფრთხოება და ინფრასტრუქტურა. Cisco-ს ეკოსისტემის ღრმა გაცნობა.</p>
+          <p data-i18n-en>Networking, security and infrastructure. Deep dive into the Cisco ecosystem.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section class="section" id="projects" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n-ka>/ პროექტები</div>
+        <div class="eyebrow" data-i18n-en>/ Projects</div>
+        <h2 class="h-display">
+          <span data-i18n-ka>შერჩეული <em style="color:var(--accent-hover)">ნამუშევრები</em>.</span>
+          <span data-i18n-en>Selected <em style="color:var(--accent-hover)">work</em>.</span>
+        </h2>
+      </div>
+      <div class="right" data-i18n-ka>პრემიუმ დიზაინი და სრული პროდუქტ მიდგომა — ყველა პროექტი ჩემს ხელში.</div>
+      <div class="right" data-i18n-en>Premium design and full product thinking — every project is end-to-end.</div>
+    </div>
+
+    <div class="projects-grid reveal">
+
+      <a class="proj-card" href="https://luxxbatumi7.netlify.app/" target="_blank" rel="noopener">
+        <div class="proj-cover">
+          <div class="bg" style="background:linear-gradient(135deg,#0EA5E9 0%,#1E40AF 50%,#0B1F3A 100%)"></div>
+          <div class="shot" style="background-image:url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fluxxbatumi7.netlify.app%2F?w=1200')"></div>
+          <div class="veil"></div>
+          <div class="tag" data-i18n-ka>ტრანსპორტი</div>
+          <div class="tag" data-i18n-en>Transport</div>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h14M5 17a2 2 0 1 1 0-4h14a2 2 0 1 1 0 4M7 13l1-5h8l1 5"/></svg></div>
+          <div class="title">BEGA.info</div>
+        </div>
+        <div class="proj-body">
+          <p data-i18n-ka>სატრანსპორტო პლატფორმა — VIP · Gold · Silver · Standard სერვის ჯგუფებით და პრემიუმ ვებგვერდით.</p>
+          <p data-i18n-en>Transport platform with VIP · Gold · Silver · Standard tiers and a premium landing experience.</p>
+          <div class="chips"><span class="chip">Next.js</span><span class="chip">Tailwind</span><span class="chip">Pricing</span></div>
+        </div>
+      </a>
+
+      <article class="proj-card">
+        <div class="proj-cover">
+          <div class="bg" style="background:linear-gradient(135deg,#10B981 0%,#0EA5E9 60%,#0B1F3A 100%)"></div>
+          <div class="shot" style="background-image:url('assets/projects/travel-guardian.jpg')"></div>
+          <div class="veil"></div>
+          <div class="tag" data-i18n-ka>AI · ტურიზმი</div>
+          <div class="tag" data-i18n-en>AI · Tourism</div>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+          <div class="title">Travel Guardian AI</div>
+        </div>
+        <div class="proj-body">
+          <p data-i18n-ka>ტურისტების დახმარების პლატფორმა საქართველოსთვის — Next.js 15, Leaflet, WebSocket, RBAC, Docker.</p>
+          <p data-i18n-en>Tourist assistance platform for Georgia — Next.js 15, Leaflet, WebSocket, RBAC, Docker.</p>
+          <div class="chips"><span class="chip">Next.js 15</span><span class="chip">Prisma</span><span class="chip">WebSocket</span><span class="chip">Docker</span></div>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-cover">
+          <div class="bg" style="background:linear-gradient(160deg,#F4B400 0%,#D89B00 40%,#7a5a00 100%)"></div>
+          <div class="shot" style="background-image:url('assets/projects/khikhani.jpg')"></div>
+          <div class="veil"></div>
+          <div class="tag" data-i18n-ka>ისტორია</div>
+          <div class="tag" data-i18n-en>Heritage</div>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21V12h6v9"/></svg></div>
+          <div class="title">ხიხანის ციხე</div>
+        </div>
+        <div class="proj-body">
+          <p data-i18n-ka>XI–XIII სს., 2236 მ ზ.დ., აჭარა · მაღალმთიანი საქართველო. ისტორიული, cinematic სტილი.</p>
+          <p data-i18n-en>XI–XIII c., 2236 m, Ajara — Mountainous Georgia. Historical, cinematic web experience.</p>
+          <div class="chips"><span class="chip">Historiography</span><span class="chip">Cinematic</span></div>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-cover">
+          <div class="bg" style="background:linear-gradient(135deg,#22C55E 0%,#0B1F3A 100%)"></div>
+          <div class="shot" style="background-image:url('assets/projects/khikhadziri.jpg')"></div>
+          <div class="veil"></div>
+          <div class="tag" data-i18n-ka>ტურიზმი</div>
+          <div class="tag" data-i18n-en>Tourism</div>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 6 4 9 4 14a8 8 0 0 0 16 0c0-5-4-8-8-12z"/></svg></div>
+          <div class="title">ხიხაძირი</div>
+        </div>
+        <div class="proj-body">
+          <p data-i18n-ka>ისტორია, ლეგენდები, ღირსშესანიშნაობები, ტრადიციები და ტურისტული მარშრუტები.</p>
+          <p data-i18n-en>History, legends, landmarks, traditions and tourist routes.</p>
+          <div class="chips"><span class="chip">Storytelling</span><span class="chip">Leaflet</span></div>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-cover">
+          <div class="bg" style="background:linear-gradient(135deg,#FF9F43 0%,#D89B00 60%,#111 100%)"></div>
+          <div class="shot" style="background-image:url('assets/projects/digit.jpg')"></div>
+          <div class="veil"></div>
+          <div class="tag" data-i18n-ka>აუქციონი</div>
+          <div class="tag" data-i18n-en>Auction</div>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 19h18M5 19l3-9h8l3 9M9 10V6a3 3 0 0 1 6 0v4"/></svg></div>
+          <div class="title">DIGIT</div>
+        </div>
+        <div class="proj-body">
+          <p data-i18n-ka>მეორადი ნივთების აუქციონის პლატფორმა — real-time bidding, RBAC, dashboard.</p>
+          <p data-i18n-en>Second-hand goods auction platform — real-time bidding, RBAC, dashboard.</p>
+          <div class="chips"><span class="chip">Realtime</span><span class="chip">RBAC</span></div>
+        </div>
+      </article>
+
+      <a class="proj-card" href="https://maxima0001.netlify.app/" target="_blank" rel="noopener">
+        <div class="proj-cover">
+          <div class="bg" style="background:linear-gradient(135deg,#0E1F3A 0%,#2563EB 50%,#0EA5E9 100%)"></div>
+          <div class="shot" style="background-image:url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmaxima0001.netlify.app%2F?w=1200')"></div>
+          <div class="veil"></div>
+          <div class="tag" data-i18n-ka>მაღაზია</div>
+          <div class="tag" data-i18n-en>E-commerce</div>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l1-5h16l1 5M3 9v11h18V9M9 13h6"/></svg></div>
+          <div class="title">MAXIMA</div>
+        </div>
+        <div class="proj-body">
+          <p data-i18n-ka>თანამედროვე ონლაინ მაღაზია — სუფთა, პრემიუმ ვიზუალი, smooth UX.</p>
+          <p data-i18n-en>Modern e-commerce experience — clean, premium visuals and frictionless UX.</p>
+          <div class="chips"><span class="chip">Storefront</span><span class="chip">Cart</span></div>
+        </div>
+      </a>
+
+      <article class="proj-card">
+        <div class="proj-cover">
+          <div class="bg" style="background:linear-gradient(135deg,#111 0%,#38BDF8 100%)"></div>
+          <div class="shot" style="background-image:url('assets/projects/hotel.jpg')"></div>
+          <div class="veil"></div>
+          <div class="tag" data-i18n-ka>Hospitality</div>
+          <div class="tag" data-i18n-en>Hospitality</div>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17v-7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v7M3 17h18M3 21h18M7 17v4M17 17v4"/></svg></div>
+          <div class="title">Hotel Management</div>
+        </div>
+        <div class="proj-body">
+          <p data-i18n-ka>ოთახები, ჯავშნები, check-in/out, housekeeping, room service, mini bar, კალენდარი.</p>
+          <p data-i18n-en>Rooms, reservations, check-in/out, housekeeping, room service, mini bar, availability calendar.</p>
+          <div class="chips"><span class="chip">Booking</span><span class="chip">Calendar</span></div>
+        </div>
+      </article>
+
+      <a class="proj-card" href="https://travelground77.netlify.app/" target="_blank" rel="noopener">
+        <div class="proj-cover">
+          <div class="bg" style="background:linear-gradient(135deg,#22C55E 0%,#1677FF 50%,#0EA5E9 100%)"></div>
+          <div class="shot" style="background-image:url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Ftravelground77.netlify.app%2F?w=1200')"></div>
+          <div class="veil"></div>
+          <div class="tag" data-i18n-ka>Travel</div>
+          <div class="tag" data-i18n-en>Travel</div>
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 4 3 16 0 20M12 2c-3 4-3 16 0 20"/></svg></div>
+          <div class="title">TravelWorld</div>
+        </div>
+        <div class="proj-body">
+          <p data-i18n-ka>ქვეყნების მკვლევარი, დანიშნულებები, სასტუმროები, რესტორნები, AI ტურისტული ასისტენტი, ინტერაქტიული რუკა.</p>
+          <p data-i18n-en>Countries explorer, destinations, hotels, restaurants, AI travel assistant, interactive map.</p>
+          <div class="chips"><span class="chip">Map</span><span class="chip">AI</span><span class="chip">Admin</span></div>
+        </div>
+      </a>
+
+      <a class="proj-card" href="https://schoolbg.netlify.app/" target="_blank" rel="noopener">
+        <div class="proj-cover">
+          <div class="bg" style="background:linear-gradient(135deg,#FFF7DD 0%,#F4B400 50%,#D89B00 100%)"></div>
+          <div class="shot" style="background-image:url('https://s.wordpress.com/mshots/v1/https%3A%2F%2Fschoolbg.netlify.app%2F?w=1200')"></div>
+          <div class="veil" style="background:linear-gradient(180deg,transparent,rgba(0,0,0,.3))"></div>
+          <div class="tag" data-i18n-ka>სკოლა</div>
+          <div class="tag" data-i18n-en>School</div>
+          <div class="ico" style="background:rgba(0,0,0,.85);color:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-5 9 5-9 5-9-5z"/><path d="M7 11v5c2 1 3 2 5 2s3-1 5-2v-5"/></svg></div>
+          <div class="title" style="color:#111">School CMS</div>
+        </div>
+        <div class="proj-body">
+          <p data-i18n-ka>მასწავლებლები, საგნები, ღონისძიებები, გალერეა, მიღწევები — ერთი ადმინისტრატორი.</p>
+          <p data-i18n-en>Teachers, subjects, events, gallery, achievements — one admin to manage them all.</p>
+          <div class="chips"><span class="chip">CMS</span><span class="chip">Dashboard</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n-ka>/ განათლება</div>
+        <div class="eyebrow" data-i18n-en>/ Education</div>
+        <h2 class="h-display">
+          <span data-i18n-ka>სერტიფიკატები და <em style="color:var(--accent-hover)">კურსები</em>.</span>
+          <span data-i18n-en>Certificates &amp; <em style="color:var(--accent-hover)">training</em>.</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="edu-grid reveal">
+      <div class="edu-card"><div class="badge">TP</div><div><h5>Front-Developer — Techno Park</h5><p>2022 — 2023</p></div></div>
+      <div class="edu-card"><div class="badge">10x</div><div><h5>Front-Developer — 10x</h5><p>HTML · CSS · JavaScript · Python · 2023 — 2025</p></div></div>
+      <div class="edu-card"><div class="badge">CS</div><div><h5>Cisco — Cybersecurity Specialist</h5><p>2023 — 2024</p></div></div>
+      <div class="edu-card"><div class="badge">CI</div><div><h5>Cisco Information Technology</h5><p>2022 — 2024</p></div></div>
+      <div class="edu-card"><div class="badge">BK</div><div><h5 data-i18n-ka>კოლეჯი „ბექსი"</h5><h5 data-i18n-en>College „Beksi"</h5><p>07/2022 — 09/2023 · ბათუმი</p></div></div>
+      <div class="edu-card"><div class="badge">FD</div><div><h5>Front Developer Certificate</h5><p>11/2024 — Present</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n-ka>/ კონტაქტი</div>
+        <div class="eyebrow" data-i18n-en>/ Contact</div>
+        <h2 class="h-display">
+          <span data-i18n-ka>დავიწყოთ <em style="color:var(--accent-hover)">პროექტი</em>.</span>
+          <span data-i18n-en>Let's start a <em style="color:var(--accent-hover)">project</em>.</span>
+        </h2>
+      </div>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <h3 data-i18n-ka>მზად ხარ შესანიშნავი<br/><span class="gold">პროდუქტისთვის?</span></h3>
+        <h3 data-i18n-en>Ready for something<br/><span class="gold">remarkable?</span></h3>
+        <a class="email" href="mailto:beglar.gabaidze@gmail.com">beglar.gabaidze@gmail.com</a>
+        <div class="contact-list">
+          <a href="https://github.com/" target="_blank" rel="noopener">
+            <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5 3.3 9.3 7.8 10.8.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.6-1.3-1.6-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.8C23.5 5.6 18.4.5 12 .5z"/></svg></span>
+            <span data-i18n-ka>GitHub · პროექტების ნახვა</span>
+            <span data-i18n-en>GitHub · view my work</span>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+            <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3h-17A1.5 1.5 0 0 0 2 4.5v15A1.5 1.5 0 0 0 3.5 21h17a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 20.5 3zM8 18H5V10h3v8zM6.5 8.5a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4zM19 18h-3v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2V18h-3V10h3v1.2c.4-.8 1.5-1.6 3-1.6 3.2 0 3.8 2.1 3.8 4.8V18z"/></svg></span>
+            <span data-i18n-ka>LinkedIn · პროფესიული ქსელი</span>
+            <span data-i18n-en>LinkedIn · professional network</span>
+          </a>
+          <a href="https://wa.me/" target="_blank" rel="noopener">
+            <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.6 17.4L2 22l4.7-1.5A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-2.7.9.9-2.6-.2-.3A8 8 0 1 1 12 20zm4.6-5.9c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.5.1-.6.8-.7 1-.3.1-.5 0a6.5 6.5 0 0 1-1.9-1.2 7 7 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5L9.6 9c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4.1 4.7 4.7 0 0 0 2.1.4 3.4 3.4 0 0 0 2.2-1.5 2.8 2.8 0 0 0 .2-1.5c-.1-.1-.2-.2-.5-.3z"/></svg></span>
+            <span data-i18n-ka>WhatsApp · პირდაპირი ჩატი</span>
+            <span data-i18n-en>WhatsApp · direct chat</span>
+          </a>
+        </div>
+      </div>
+
+      <form class="form-card" onsubmit="event.preventDefault();alert(currentLang==='ka'?'შეტყობინება გამოგზავნილია ✓':'Message sent ✓');this.reset()">
+        <h4 data-i18n-ka>მომწერე შეტყობინება</h4>
+        <h4 data-i18n-en>Send a message</h4>
+        <p class="kicker" data-i18n-ka>გამოხმაურება 24 საათში.</p>
+        <p class="kicker" data-i18n-en>I'll reply within 24 hours.</p>
+        <div class="field"><label data-i18n-ka>სახელი</label><label data-i18n-en>Name</label><input type="text" required></div>
+        <div class="field"><label data-i18n-ka>ელ.ფოსტა</label><label data-i18n-en>Email</label><input type="email" required></div>
+        <div class="field">
+          <label data-i18n-ka>თემა</label><label data-i18n-en>Topic</label>
+          <select>
+            <option data-i18n-ka>ვებგვერდი</option><option data-i18n-en>Website</option>
+            <option data-i18n-ka>Front-End</option><option data-i18n-en>Front-End</option>
+            <option data-i18n-ka>IT / ქსელები</option><option data-i18n-en>IT / Networks</option>
+            <option data-i18n-ka>UI/UX</option><option data-i18n-en>UI/UX</option>
+            <option data-i18n-ka>სხვა</option><option data-i18n-en>Other</option>
+          </select>
+        </div>
+        <div class="field"><label data-i18n-ka>შეტყობინება</label><label data-i18n-en>Message</label><textarea required></textarea></div>
+        <button class="btn btn-accent" type="submit">
+          <span data-i18n-ka>გაგზავნა</span>
+          <span data-i18n-en>Send</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:18px"><span class="brand-dot"></span> BEGLAR <span style="font-family:var(--font-display);font-weight:900;color:var(--accent)">G.</span></div>
+        <p data-i18n-ka>ბეგლარ გაბაიძე — ინფორმაციული ტექნოლოგიების მენეჯერი. ბათუმი, საქართველო.</p>
+        <p data-i18n-en>Beglar Gabaidze — IT Manager. Batumi, Georgia.</p>
+      </div>
+      <div>
+        <h6 data-i18n-ka>ნავიგაცია</h6>
+        <h6 data-i18n-en>Navigate</h6>
+        <a href="#about" data-i18n-ka>შესახებ</a><a href="#about" data-i18n-en>About</a><br/>
+        <a href="#skills" data-i18n-ka>უნარები</a><a href="#skills" data-i18n-en>Skills</a><br/>
+        <a href="#projects" data-i18n-ka>პროექტები</a><a href="#projects" data-i18n-en>Projects</a><br/>
+        <a href="#contact" data-i18n-ka>კონტაქტი</a><a href="#contact" data-i18n-en>Contact</a>
+      </div>
+      <div>
+        <h6 data-i18n-ka>სოციალური</h6>
+        <h6 data-i18n-en>Social</h6>
+        <a href="https://github.com/" target="_blank">GitHub</a><br/>
+        <a href="https://linkedin.com/" target="_blank">LinkedIn</a><br/>
+        <a href="mailto:beglar.gabaidze@gmail.com">Email</a>
+      </div>
+      <div>
+        <h6 data-i18n-ka>ტექნოლოგიები</h6>
+        <h6 data-i18n-en>Stack</h6>
+        <a>Next.js · TypeScript</a><br/>
+        <a>PostgreSQL · Prisma</a><br/>
+        <a>Framer Motion · Figma</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 <strong style="color:var(--ink)">BEGLAR GABAIDZE</strong>. <span data-i18n-ka>ყველა უფლება დაცულია.</span><span data-i18n-en>All rights reserved.</span></div>
+      <div data-i18n-ka>შექმნილია 💛-ით ბათუმში</div>
+      <div data-i18n-en>Crafted with 💛 in Batumi</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

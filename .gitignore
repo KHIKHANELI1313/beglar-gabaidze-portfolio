@@ -1,0 +1,9 @@
+# backups / local-only
+*.bak
+assets/portrait-headshot-old.png
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+node_modules/
