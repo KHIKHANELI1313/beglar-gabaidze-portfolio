@@ -49,9 +49,9 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 #intro{
   position:fixed;inset:0;z-index:9999;background:#0b0b0b;
   display:grid;place-items:center;overflow:hidden;
-  transition:opacity 1s var(--ease),visibility 1s var(--ease);
+  transition:opacity .8s var(--ease),transform 1s var(--ease),visibility 1s var(--ease);
 }
-#intro.hide{opacity:0;visibility:hidden;pointer-events:none}
+#intro.hide{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-100%)}
 #intro canvas{position:absolute;inset:0;width:100%;height:100%}
 .intro-name{
   position:relative;color:#fff;font-family:var(--font-display);font-weight:900;
@@ -174,6 +174,22 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   .portrait-frame{max-width:400px;margin-inline:auto}
   .floating-tag.flag{left:-10px}.floating-tag.location{right:-10px}
 }
+
+/* Hero load-in sequence — plays as the intro curtain lifts */
+.js .hero-eyebrow,
+.js .hero-title,
+.js .hero-sub,
+.js .hero-cta,
+.js .hero-meta,
+.js .portrait-frame{opacity:0}
+.intro-done .hero-eyebrow{animation:heroIn .7s var(--ease) 0s both}
+.intro-done .hero-title{animation:heroIn .7s var(--ease) .1s both}
+.intro-done .hero-sub{animation:heroIn .7s var(--ease) .22s both}
+.intro-done .hero-cta{animation:heroIn .7s var(--ease) .34s both}
+.intro-done .hero-meta{animation:heroIn .7s var(--ease) .46s both}
+.intro-done .portrait-frame{animation:heroPop .9s var(--ease) .2s both}
+@keyframes heroIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes heroPop{from{opacity:0;transform:translateY(34px) scale(.955)}to{opacity:1;transform:none}}
 
 /* ---------- Sections ---------- */
 .section{padding:120px 0;position:relative}
@@ -332,6 +348,7 @@ a.proj-card:focus-visible{outline:2px solid var(--accent-hover);outline-offset:3
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
+  .hero-eyebrow,.hero-title,.hero-sub,.hero-cta,.hero-meta,.portrait-frame{opacity:1!important}
 }
 
 /* i18n helper */
@@ -957,6 +974,7 @@ a.proj-card:focus-visible{outline:2px solid var(--accent-hover);outline-offset:3
 (function(){
   /* ===== i18n ===== */
   const html = document.documentElement;
+  html.classList.add('js');
   let currentLang = localStorage.getItem('bg-lang') || 'ka';
   function setLang(l){
     currentLang = l;
@@ -1033,7 +1051,13 @@ a.proj-card:focus-visible{outline:2px solid var(--accent-hover);outline-offset:3
     requestAnimationFrame(drawIntro);
   }
   drawIntro();
-  setTimeout(()=>intro.classList.add('hide'), 2400);
+  // Curtain lift, then trigger the hero load-in sequence
+  setTimeout(()=>{
+    intro.classList.add('hide');
+    setTimeout(()=>document.body.classList.add('intro-done'), 250);
+  }, 2400);
+  // Safety net: never leave the hero hidden if something above threw
+  addEventListener('load', ()=>setTimeout(()=>document.body.classList.add('intro-done'), 3200));
 
   /* ===== Hero animated background (gradient mesh) ===== */
   const heroCv = document.getElementById('heroCanvas');

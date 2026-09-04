@@ -1,6 +1,7 @@
 (function(){
   /* ===== i18n ===== */
   const html = document.documentElement;
+  html.classList.add('js');
   let currentLang = localStorage.getItem('bg-lang') || 'ka';
   function setLang(l){
     currentLang = l;
@@ -77,7 +78,13 @@
     requestAnimationFrame(drawIntro);
   }
   drawIntro();
-  setTimeout(()=>intro.classList.add('hide'), 2400);
+  // Curtain lift, then trigger the hero load-in sequence
+  setTimeout(()=>{
+    intro.classList.add('hide');
+    setTimeout(()=>document.body.classList.add('intro-done'), 250);
+  }, 2400);
+  // Safety net: never leave the hero hidden if something above threw
+  addEventListener('load', ()=>setTimeout(()=>document.body.classList.add('intro-done'), 3200));
 
   /* ===== Hero animated background (gradient mesh) ===== */
   const heroCv = document.getElementById('heroCanvas');
